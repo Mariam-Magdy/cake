@@ -1,0 +1,169 @@
+*{
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+
+body{
+    margin: 0 auto;
+    padding: 0;
+    background-color: pink;
+    font-family: 'Lobster Two', cursive;
+    text-shadow: 2px 2px 20px black;
+    text-align: center;
+    color: white;
+}
+
+header, footer{
+    margin: 0 auto;
+    width: 70%;
+}
+
+nav ul{
+    margin: 0;
+    padding: 10px 0;
+    border-radius: 5px;
+    list-style-type: none;
+    background: rgba(0, 0, 0, 0.5);
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));
+    background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));
+}
+
+nav ul li a{
+    text-decoration: none;
+    width: 25%;
+    float: left;
+    color: white;
+}
+
+nav ul li a:hover{
+    color: palevioletred;
+}
+
+nav ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.icon{
+    height: 200px;
+    width: 150px;
+}
+
+div{
+    height: 200px;
+    margin: 0 auto;
+    width: 60%;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: 40px;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+}
+
+.sec{
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));
+    background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));
+}
+
+.sec:hover{
+    height: 210px;
+}
+
+.inside{
+    float: right;
+    width: 20%;
+    height: auto;
+    margin: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));
+    background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));
+    border-radius: 10px;
+}
+
+.one{
+    background-image: url('../assets/pic1.jpg');
+}
+
+.two{
+    background-image: url('../assets/pic2.jpg');
+}
+
+.three{
+    background-image: url('../assets/pic3.jpg');
+}
+
+.pic, .pic2{
+    height: auto;
+    width: 49%;
+    border-radius: 12px;
+}
+
+.pic2{
+    float: right;
+}
+
+.four{
+    height: 300px;
+}
+
+footer{
+    background-color: palevioletred;
+    clear: both;
+    border-radius: 5px 5px 0 0;
+}
+
+/*scroll*/
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: pink;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+}
+
+/*mobile screen*/
+@media screen and (max-width: 500px){
+    .icon{
+        height: 100px;
+        width: 100px;
+    }
+    
+    nav ul{
+        background: none;
+    }
+
+    nav ul li::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    nav ul li a{
+        float: initial;
+    }
+
+    nav ul li{
+        background: rgba(0, 0, 0, 0.5);
+        background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));
+        background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));    
+        margin: 15px 0;
+    }
+
+    .sec:hover{
+        height: auto;
+    }
+}

@@ -167,4 +167,8 @@ footer{
     .sec:hover{
         height: auto;
     }
+
+    .pic, .pic2{
+        height: 180px;
+    }
 }

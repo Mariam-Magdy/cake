@@ -1,10 +1,42 @@
 *{
     -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
+    scroll-behavior: smooth;
 }
 
+#slideshow {
+    background-image: url('../assets/show1.jpg');
+    width: 80%;
+    height: 80vh;
+    margin: 10vh auto;
+    position: relative;
+}
 
-body{
+#slideshow a {
+    position: absolute;
+    text-shadow: 2px 2px 20px black;
+    color: palevioletred;
+    top: 50%;
+    font-size: xx-large;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#slideshow a:hover {
+    color: pink;
+}
+
+#prev {
+    padding-left: 30px;
+    right: 0;
+}
+
+#next {
+    padding-right: 30px;
+    left: 0;
+}
+body {
     margin: 0 auto;
     padding: 0;
     background-color: pink;
@@ -14,12 +46,12 @@ body{
     color: white;
 }
 
-header, footer{
+header, footer {
     margin: 0 auto;
     width: 70%;
 }
 
-nav ul{
+nav ul {
     margin: 0;
     padding: 0;
     border-radius: 5px;
@@ -29,29 +61,30 @@ nav ul{
     background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     width: 25%;
     float: left;
     color: white;
+    padding: 10px 0;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     background-color: palevioletred;
 }
 
-nav ul::after{
+nav ul::after {
     content: "";
     display: block;
     clear: both;
 }
 
-.icon{
+.icon {
     height: 200px;
     width: 150px;
 }
 
-div{
+div {
     height: 250px;
     margin: 0 auto;
     width: 60%;
@@ -65,7 +98,7 @@ div{
     overflow: hidden;
 }
 
-.sec{
+.sec {
     position: absolute;
     bottom: 0;
     height: 60px;
@@ -74,11 +107,11 @@ div{
     background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));
 }
 
-.sec:hover{
+.sec:hover {
     height: 210px;
 }
 
-.inside{
+.inside {
     position: absolute;
     right: 10px;
     width: auto;
@@ -90,33 +123,34 @@ div{
     border-radius: 10px;
 }
 
-.one{
+.one {
     background-image: url('../assets/pic1.jpg');
 }
 
-.two{
+.two {
     background-image: url('../assets/pic2.jpg');
 }
 
-.three{
+.three {
     background-image: url('../assets/pic3.jpg');
 }
 
-.pic, .pic2{
-    height: 250px;
+.pic, .pic2 {
+    height: 45vh;
     width: 49%;
     border-radius: 12px;
 }
 
-.pic2{
+.pic2 {
     float: right;
 }
 
-.four{
-    height: 300px;
+.four {
+    height: auto;
+    position: relative;
 }
 
-footer{
+footer {
     background-color: palevioletred;
     clear: both;
     border-radius: 5px 5px 0 0;
@@ -137,40 +171,43 @@ footer{
 }
 
 /*mobile screen*/
-@media screen and (max-width: 500px){
-    .icon{
+@media screen and (max-width: 500px) {
+    .icon {
         height: 100px;
         width: 100px;
     }
     
-    nav ul{
+    nav ul {
         background: none;
     }
 
-    nav ul li::after{
+    nav ul li::after {
         content: "";
         display: block;
         clear: both;
     }
 
-    nav ul li a{
+    nav ul li a {
         float: initial;
         font-size: large;
     }
 
-    nav ul li{
-        height: 44px;
+    nav ul li {
+        padding: 10px 0;    
         background: rgba(0, 0, 0, 0.5);
         background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));
         background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));    
         margin: 15px 0;
     }
 
-    .sec:hover{
+    .sec:hover {
         height: auto;
     }
 
-    .pic, .pic2{
-        height: 180px;
+    .pic, .pic2 {
+        width: 100%;
+    } 
+    .pic2 {
+        float: initial;
     }
 }
